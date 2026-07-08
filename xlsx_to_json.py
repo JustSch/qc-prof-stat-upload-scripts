@@ -15,7 +15,7 @@ class qcdistroimport:
         sheet = self.choose_worksheet(wb)
         ws = wb[sheet]
         full_term = self.choose_term() + ' ' + str(self.choose_year())
-        for row in ws['A2:V4209']:
+        for row in ws[f'A2:{chr(ws.max_column + 64)}{ws.max_row}']:
             count=0
             column={}
             for value in row:  
